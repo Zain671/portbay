@@ -1,158 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Studio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>Portbay Retail</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter;background:radial-gradient(circle at top,#10162b,#07090d);color:white}
-a{text-decoration:none;color:inherit}
-header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-.logo{font-weight:900;font-size:18px}
-nav a{margin-left:14px;padding:10px 14px;border-radius:10px;background:#111;border:1px solid rgba(255,255,255,.06)}
-.hero{max-width:1100px;margin:auto;padding:80px 24px 30px}
-.hero h1{font-size:40px}
-.hero p{opacity:.7}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-.box{background:#101524;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px}
-.social{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
-.section{max-width:1100px;margin:auto;padding:50px 24px}
-.group-title{margin:25px 0 10px;font-weight:700;opacity:.7}
-.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.member{background:#0d1323;border-radius:16px;padding:14px;border:1px solid rgba(255,255,255,.06);cursor:pointer;transition:.25s}
-.member:hover{transform:scale(1.03);box-shadow:0 0 22px rgba(100,120,255,.3)}
-.avatar{aspect-ratio:1;border-radius:12px;background-size:cover;background-position:center;margin-bottom:10px}
-h4{font-weight:700}
-.note{opacity:.6;font-size:12px}
-.badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;margin:4px 0}
-.exec{background:linear-gradient(135deg,#6a85ff,#93a4ff)}
-.board{background:linear-gradient(135deg,#7d59ff,#b394ff)}
-.corp{background:linear-gradient(135deg,#00b0a8,#4effdc)}
-.expand{max-height:0;overflow:hidden;transition:.3s ease;font-size:13px}
-.member.open .expand{max-height:200px;margin-top:8px}
-.task{background:#121830;padding:6px;border-radius:8px;margin-top:6px}
-footer{text-align:center;padding:20px;opacity:.5}
-@media(max-width:600px){.grid{grid-template-columns:1fr}.social{grid-template-columns:1fr}}
+body{
+font-family:Inter;
+color:white;
+background:url("0B0B0C50-C355-4523-B3FE-41E6915BB266.jpeg") center/cover no-repeat fixed;
+}
+.bgblur{
+position:fixed;inset:0;
+backdrop-filter:blur(28px) brightness(.6) saturate(1.3);
+z-index:-1
+}
+.container{max-width:1200px;margin:auto;padding:20px}
+
+header{
+display:flex;justify-content:space-between;align-items:center;
+padding:14px 20px;border-radius:18px;
+background:rgba(15,19,40,.55);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12)
+}
+
+.logo-wrap{
+display:flex;align-items:center;gap:12px;font-weight:900;font-size:18px
+}
+
+.logo-wrap img{
+width:42px;border-radius:10px
+}
+
+nav a{
+background:rgba(255,255,255,.08);
+padding:10px 16px;border-radius:14px;
+margin-left:8px;font-weight:600
+}
+
+.hero{
+margin-top:60px;
+background:rgba(14,17,41,.6);
+border-radius:28px;
+padding:44px;
+backdrop-filter:blur(22px);
+border:1px solid rgba(255,255,255,.14);
+box-shadow:0 0 60px rgba(255,255,255,.1)
+}
+
+.hero h1{font-size:42px;font-weight:900}
+.hero p{opacity:.75;margin-top:6px}
+
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.card{
+padding:16px;border-radius:18px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12)
+}
+
+.socials{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px}
+
+.discord{
+display:flex;align-items:center;gap:12px;
+cursor:pointer
+}
+.discord img{width:32px}
+
+.section{margin-top:55px}
+
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.group{margin-top:20px;font-weight:700;opacity:.65}
+
+.member{
+background:rgba(20,25,60,.75);
+border-radius:16px;padding:10px;
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,.1);
+cursor:pointer;transition:.25s
+}
+.member:hover{transform:scale(1.05)}
+
+.avatar{
+width:100%;
+aspect-ratio:1;
+border-radius:10px;
+background:#222 center/cover no-repeat
+}
+
+.minfo{margin-top:6px}
+.minfo h4{font-size:13px}
+.badge{
+font-size:10px;
+padding:4px 9px;
+border-radius:30px;
+display:inline-block;
+margin:4px 0
+}
+
+.exec{background:linear-gradient(135deg,#70a0ff,#8bb4ff)}
+.board{background:linear-gradient(135deg,#a779ff,#dbb8ff)}
+.corp{background:linear-gradient(135deg,#00f0d4,#7bffe7)}
+
+.note{opacity:.6;font-size:11px}
+
+.expand{
+max-height:0;overflow:hidden;
+transition:.3s ease;font-size:11px
+}
+
+.member.open .expand{max-height:120px;margin-top:4px}
+.task{
+background:rgba(255,255,255,.08);
+border-radius:8px;padding:4px;margin-top:4px
+}
+
+footer{text-align:center;margin:30px 0;opacity:.5}
+
+@media(max-width:680px){
+.links{grid-template-columns:1fr}
+.socials{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
+<div class="bgblur"></div>
+
+<div class="container">
+
 <header>
-<div class="logo">Studio</div>
+<div class="logo-wrap">
+<img src="DF85CBB7-FE6B-429E-A02B-A14F67EF5D21.png">
+<span>Portbay Retail</span>
+</div>
 <nav>
 <a href="#lead">Leadership</a>
-<a href="#">Status</a>
-<a href="#">Contact</a>
+<a href="https://discord.gg/portbay" target="_blank">Discord</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>Welcome</h1>
-<p>Professional studio control hub</p>
+<h1>Portbay Retail</h1>
+<p>Roblox Retail Reimagined</p>
 
-<div class="grid">
-<div class="box"><b>Community Rules</b><p>Guidelines & standards</p></div>
-<div class="box"><b>Systems</b><p>Gameplay documentation</p></div>
-<div class="box"><b>Moderation</b><p>Proper action flow</p></div>
+<div class="links">
+<div class="card"><b>Community Rules</b><p>Expectations and conduct</p></div>
+<div class="card"><b>Systems</b><p>Store & gameplay operations</p></div>
+<div class="card"><b>Moderation</b><p>Fair and structured actions</p></div>
 </div>
 
-<div class="social">
-<div class="box">Discord Link Placeholder</div>
-<div class="box">Roblox Group Link Placeholder</div>
+<div class="socials">
+<div class="card discord" onclick="window.open('https://discord.gg/portbay')">
+<img src="https://cdn.simpleicons.org/discord/white">
+<div><b>Discord Server</b><p>discord.gg/portbay</p></div>
 </div>
+<div class="card">Roblox Group</div>
+</div>
+
 </section>
 
 <section id="lead" class="section">
 
 <h2>Leadership</h2>
 
-<div class="group-title">Executive Officer</div>
+<div class="group">Executive Officer</div>
 <div class="team">
-<div class="member exec" onclick="toggle(this)">
-<div class="avatar" data-user="not_jacooob"></div>
+
+<div class="member exec" data-user="not_jacooob">
+<div class="avatar"></div>
+<div class="minfo">
 <h4>Jacob</h4>
 <span class="badge exec">Executive Officer</span>
-<div class="note">@not_jacooob · Established 2025</div>
-<div class="expand">
-<div class="task">Final approval authority</div>
-<div class="task">Company vision</div>
+<div class="note">@not_jacooob · 2025 Founder</div>
 </div>
+<div class="expand">
+<div class="task">Executive leadership</div>
+<div class="task">Final decisions</div>
 </div>
 </div>
 
-<div class="group-title">Executive Board</div>
+</div>
+
+<div class="group">Executive Board</div>
 <div class="team">
 
-<div class="member board" onclick="toggle(this)">
-<div class="avatar" data-user="67stcrrygems"></div>
+<div class="member board" data-user="67stcrrygems">
+<div class="avatar"></div>
+<div class="minfo">
 <h4>hearts4dylan</h4>
 <span class="badge board">PR Director</span>
 <div class="note">@67stcrrygems</div>
+</div>
 <div class="expand">
 <div class="task">Public relations</div>
-<div class="task">Media oversight</div>
 </div>
 </div>
 
-<div class="member board" onclick="toggle(this)">
-<div class="avatar" data-user="BlazeBurnage"></div>
+<div class="member board" data-user="BlazeBurnage">
+<div class="avatar"></div>
+<div class="minfo">
 <h4>Oliver</h4>
-<span class="badge board">Staffing Overseer (Temp)</span>
+<span class="badge board">Staffing Overseer</span>
 <div class="note">@BlazeBurnage</div>
+</div>
 <div class="expand">
 <div class="task">Hiring</div>
-<div class="task">Staff management</div>
 </div>
 </div>
 
-<div class="member board" onclick="toggle(this)">
+<div class="member board">
 <div class="avatar"></div>
+<div class="minfo">
 <h4>Ashley.</h4>
-<span class="badge board">Operations Overseer (Temp)</span>
-<div class="note">Executive Operations</div>
+<span class="badge board">Operations Overseer</span>
+<div class="note">Temp Director</div>
+</div>
 <div class="expand">
-<div class="task">System coordination</div>
-<div class="task">Operations control</div>
+<div class="task">Operations</div>
 </div>
 </div>
 
-<div class="member board" onclick="toggle(this)">
+<div class="member board">
 <div class="avatar"></div>
+<div class="minfo">
 <h4>cenoooeoeooe</h4>
-<span class="badge board">Development Overseer (Temp)</span>
-<div class="note">Engineering & Systems</div>
+<span class="badge board">Development Overseer</span>
+<div class="note">Temp Director</div>
+</div>
 <div class="expand">
-<div class="task">Development leadership</div>
-<div class="task">Game systems</div>
+<div class="task">System architecture</div>
 </div>
 </div>
 
 </div>
 
-<div class="group-title">Corporate Officers</div>
+<div class="group">Corporate Officers</div>
 <div class="team">
 
-<div class="member corp" onclick="toggle(this)">
+<div class="member corp">
 <div class="avatar"></div>
+<div class="minfo">
 <h4>mia</h4>
-<span class="badge corp">Intern Training Director</span>
+<span class="badge corp">Intern Director</span>
 <div class="note">Corporate</div>
+</div>
 <div class="expand">
-<div class="task">Onboarding</div>
-<div class="task">Training programs</div>
+<div class="task">Intern training</div>
 </div>
 </div>
 
-<div class="member corp" onclick="toggle(this)">
+<div class="member corp">
 <div class="avatar"></div>
-<h4>Open</h4>
+<div class="minfo">
+<h4>Vacant</h4>
 <span class="badge corp">Reserved</span>
-<div class="note">Available Position</div>
+<div class="note">Future Role</div>
+</div>
 <div class="expand">
-<div class="task">Future role</div>
+<div class="task">Unassigned</div>
 </div>
 </div>
 
@@ -160,13 +270,22 @@ footer{text-align:center;padding:20px;opacity:.5}
 
 </section>
 
-<footer>© Studio</footer>
+<footer>© Portbay Retail</footer>
+
+</div>
 
 <script>
 function toggle(e){e.classList.toggle("open")}
-document.querySelectorAll(".avatar").forEach(a=>{
-let u=a.getAttribute("data-user")
-if(u)a.style.backgroundImage=`url(https://www.roblox.com/headshot-thumbnail/image?userId=${u}&width=420&height=420&format=png)`
+document.querySelectorAll(".member").forEach(m=>m.onclick=()=>toggle(m))
+
+document.querySelectorAll(".member").forEach(async m=>{
+let u=m.dataset.user
+if(!u)return
+let r=await fetch("https://users.roproxy.com/v1/usernames/users",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({usernames:[u]})})
+let j=await r.json()
+let id=j.data[0]?.id
+if(!id)return
+m.querySelector(".avatar").style.backgroundImage=`url(https://www.roblox.com/headshot-thumbnail/image?userId=${id}&width=420&height=420&format=png)`
 })
 </script>
 
