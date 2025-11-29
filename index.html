@@ -357,7 +357,7 @@ header {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .member-card::before {
@@ -475,16 +475,26 @@ header {
 .member-card.open .expand-toggle svg {
   transform: rotate(180deg);
 }
-
 .member-expand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .member-card.open .member-expand {
   max-height: 600px;
-  margin-top: 18px;
+  padding: 20px;
 }
 
 .expand-section {
@@ -563,7 +573,7 @@ footer {
 <header>
   <div class="header-content">
     <div class="logo-wrap">
-      <img src="https://cdn.discordapp.com/attachments/1432473813328728228/1444252357272797224/image-removebg-preview-3.png" alt="Portbay Retail">
+      <img src="https://media.discordapp.net/attachments/1432473813328728228/1444252357272797224/image-removebg-preview-3.png?ex=692c0852&is=692ab6d2&hm=d38432079ff041ea888b68e03165fcf47a5369ff0673e3cec5a9dce3c00d9e9c&=&format=webp&quality=lossless&width=2170&height=460" alt="Portbay Retail">
     </div>
     <div class="header-nav">
       <a href="https://www.roblox.com/communities/36029547/Portbay-Retail#!/about" target="_blank">Roblox Group</a>
