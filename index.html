@@ -12,18 +12,27 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: white;
-  background: url("https://media.discordapp.net/attachments/1432473813328728228/1444224414488068270/image.png?ex=692bee4c&is=692a9ccc&hm=5702ecbf3f8d3317270d2265d3a91e94e30c39c6f937abcbbc4b0ab736f9a46a&=&format=webp&quality=lossless&width=2744&height=1544") center/cover no-repeat fixed;
+  color: #e8e8e8;
+  background: #0a0a0b;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
-.bgblur {
+.bg-image {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(40px) brightness(.4) saturate(1.2);
+  background: url("https://media.discordapp.net/attachments/1432473813328728228/1444224414488068270/image.png") center/cover no-repeat;
+  opacity: 0.15;
+  z-index: -2;
+}
+
+.bg-gradient {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,11,0.85) 0%, rgba(10,10,11,0.95) 100%);
   z-index: -1;
 }
 
@@ -37,14 +46,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 28px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(30px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  animation: slideDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 18px 32px;
+  border-radius: 16px;
+  background: rgba(20, 20, 22, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: slideDown 0.6s ease-out;
 }
 
 @keyframes slideDown {
@@ -62,51 +69,47 @@ header {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: -0.5px;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.3px;
 }
 
 .logo-wrap img {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
 }
 
 nav {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 nav a {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px 20px;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px 18px;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  color: white;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e8e8e8;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.18);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .hero {
-  margin-top: 40px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 32px;
-  padding: 60px 50px;
-  backdrop-filter: blur(30px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.4),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  animation: fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards;
+  margin-top: 48px;
+  background: rgba(18, 18, 20, 0.6);
+  border-radius: 20px;
+  padding: 64px 48px;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: fadeInUp 0.7s ease-out 0.1s backwards;
 }
 
 @keyframes fadeInUp {
@@ -121,135 +124,165 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 56px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #ffffff;
 }
 
 .hero > p {
-  opacity: 0.7;
+  opacity: 0.6;
   margin-top: 8px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
+  color: #b8b8b8;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
 .links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-top: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+  margin-top: 28px;
 }
 
-.card {
+.info-card {
   padding: 24px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 16px;
+  background: rgba(25, 25, 28, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.card:hover {
-  transform: translateY(-4px) scale(1.02);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+.info-card:hover {
+  transform: translateY(-2px);
+  background: rgba(30, 30, 33, 0.7);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
-.card b {
-  display: block;
-  font-size: 18px;
+.info-card h3 {
+  font-size: 16px;
   font-weight: 700;
   margin-bottom: 6px;
+  color: #ffffff;
 }
 
-.card p {
-  opacity: 0.65;
-  font-size: 14px;
-}
-
-.socials {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.discord {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.discord img {
-  width: 36px;
-  height: 36px;
-}
-
-.discord b {
-  font-size: 16px;
-}
-
-.discord p {
-  font-size: 13px;
+.info-card p {
   opacity: 0.6;
-  margin-top: 2px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b8b8b8;
 }
 
-.roblox-link {
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.link-card {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: rgba(25, 25, 28, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   text-decoration: none;
-  color: white;
+  color: #e8e8e8;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.roblox-link img {
-  width: 36px;
-  height: 36px;
+.link-card:hover {
+  background: rgba(30, 30, 33, 0.7);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.link-card img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.link-card .link-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.link-card .link-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #3b82f6;
+}
+
+.link-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.link-card p {
+  font-size: 13px;
+  opacity: 0.5;
 }
 
 .section {
-  margin-top: 60px;
-  animation: fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s backwards;
+  margin-top: 72px;
+  animation: fadeInUp 0.7s ease-out 0.2s backwards;
 }
 
-.section h2 {
-  font-size: 36px;
+.section > h2 {
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: -1px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  color: #ffffff;
 }
 
-.group {
-  margin-top: 40px;
+.group-header {
+  margin-top: 48px;
   margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.5;
+  letter-spacing: 1.2px;
+  opacity: 0.4;
+  color: #b8b8b8;
 }
 
 .team {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
 }
 
 .member {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
+  background: rgba(22, 22, 25, 0.7);
+  border-radius: 16px;
   padding: 20px;
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
 }
 
 .member::before {
@@ -258,40 +291,39 @@ nav a:hover {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
+  border-radius: 16px 16px 0 0;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .member.exec::before {
-  background: linear-gradient(90deg, #70a0ff, #8bb4ff);
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
   opacity: 1;
 }
 
 .member.board::before {
-  background: linear-gradient(90deg, #a779ff, #dbb8ff);
+  background: linear-gradient(90deg, #a855f7, #c084fc);
   opacity: 1;
 }
 
 .member.corp::before {
-  background: linear-gradient(90deg, #00f0d4, #7bffe7);
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
   opacity: 1;
 }
 
 .member:hover {
-  transform: translateY(-6px) scale(1.03);
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+  background: rgba(28, 28, 32, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .avatar {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05) center/cover no-repeat;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  background: rgba(40, 40, 45, 0.5) center/cover no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .minfo {
@@ -301,103 +333,132 @@ nav a:hover {
 .minfo h4 {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .badge {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 20px;
+  padding: 6px 10px;
+  border-radius: 8px;
   display: inline-block;
   margin: 6px 0;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 .exec .badge {
-  background: linear-gradient(135deg, #70a0ff, #8bb4ff);
-  box-shadow: 0 4px 12px rgba(112, 160, 255, 0.3);
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .board .badge {
-  background: linear-gradient(135deg, #a779ff, #dbb8ff);
-  box-shadow: 0 4px 12px rgba(167, 121, 255, 0.3);
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
 .corp .badge {
-  background: linear-gradient(135deg, #00f0d4, #7bffe7);
-  box-shadow: 0 4px 12px rgba(0, 240, 212, 0.3);
+  background: rgba(6, 182, 212, 0.15);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 .note {
-  opacity: 0.5;
+  opacity: 0.45;
   font-size: 12px;
   margin-top: 4px;
-  font-weight: 500;
+  font-weight: 400;
+  color: #b8b8b8;
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.6;
+  color: #b8b8b8;
 }
 
 .expand {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: max-height 0.4s ease;
   font-size: 12px;
 }
 
 .member.open .expand {
-  max-height: 200px;
+  max-height: 400px;
+  margin-top: 14px;
+}
+
+.expand-section {
   margin-top: 12px;
 }
 
-.task {
-  background: rgba(255, 255, 255, 0.1);
+.expand-section h5 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  opacity: 0.5;
+  margin-bottom: 8px;
+  color: #b8b8b8;
+}
+
+.role-item {
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 10px;
   padding: 8px 12px;
   margin-top: 6px;
   font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 13px;
+  color: #d8d8d8;
 }
 
 footer {
   text-align: center;
-  margin: 60px 0 30px 0;
-  opacity: 0.4;
+  margin: 80px 0 40px 0;
+  opacity: 0.3;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
+  color: #b8b8b8;
 }
 
 @media(max-width: 768px) {
   .hero {
-    padding: 40px 30px;
+    padding: 48px 32px;
   }
   
   .hero h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
   
-  .links, .socials {
+  .links, .quick-links {
     grid-template-columns: 1fr;
   }
   
   .team {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   
   nav {
-    flex-direction: column;
     gap: 8px;
   }
   
   header {
-    flex-direction: column;
-    gap: 16px;
+    padding: 16px 24px;
   }
 }
 </style>
 </head>
 <body>
 
-<div class="bgblur"></div>
+<div class="bg-image"></div>
+<div class="bg-gradient"></div>
 
 <div class="container">
 
@@ -416,33 +477,35 @@ footer {
   <h1>Portbay Retail</h1>
   <p>Roblox Retail Reimagined</p>
 
+  <div class="section-title">Information Hub</div>
   <div class="links">
-    <div class="card">
-      <b>Community Rules</b>
-      <p>Expectations and conduct</p>
+    <div class="info-card">
+      <h3>Community Rules</h3>
+      <p>Expectations and conduct guidelines for all members of the Portbay community.</p>
     </div>
-    <div class="card">
-      <b>Systems</b>
-      <p>Store & gameplay operations</p>
+    <div class="info-card">
+      <h3>Systems</h3>
+      <p>Store & gameplay operations, including mechanics and management procedures.</p>
     </div>
-    <div class="card">
-      <b>Moderation</b>
-      <p>Fair and structured actions</p>
+    <div class="info-card">
+      <h3>Moderation</h3>
+      <p>Fair and structured actions to maintain a positive community environment.</p>
     </div>
   </div>
 
-  <div class="socials">
-    <div class="card discord" onclick="window.open('https://discord.gg/portbay', '_blank')">
+  <div class="section-title">Quick Links</div>
+  <div class="quick-links">
+    <div class="link-card" onclick="window.open('https://discord.gg/portbay', '_blank')">
       <img src="https://cdn.simpleicons.org/discord/white" alt="Discord">
       <div>
-        <b>Discord Server</b>
+        <h3>Discord Server</h3>
         <p>discord.gg/portbay</p>
       </div>
     </div>
-    <a href="https://www.roblox.com/communities/36029547/Portbay-Retail#!/about" target="_blank" class="card roblox-link">
+    <a href="https://www.roblox.com/communities/36029547/Portbay-Retail#!/about" target="_blank" class="link-card">
       <img src="https://cdn.simpleicons.org/roblox/white" alt="Roblox">
       <div>
-        <b>Group Link</b>
+        <h3>Group Link</h3>
         <p>Join our community</p>
       </div>
     </a>
@@ -454,7 +517,7 @@ footer {
 
   <h2>Leadership</h2>
 
-  <div class="group">Executive Officer</div>
+  <div class="group-header">Executive Officer</div>
   <div class="team">
 
     <div class="member exec">
@@ -465,14 +528,14 @@ footer {
         <div class="note">@not_jacooob · 2025 Founder</div>
       </div>
       <div class="expand">
-        <div class="task">Executive leadership</div>
-        <div class="task">Final decisions</div>
+        <div class="role-item">Executive leadership</div>
+        <div class="role-item">Final decisions</div>
       </div>
     </div>
 
   </div>
 
-  <div class="group">Executive Board</div>
+  <div class="group-header">Executive Board</div>
   <div class="team">
 
     <div class="member board">
@@ -483,7 +546,7 @@ footer {
         <div class="note">@67stcrrygems</div>
       </div>
       <div class="expand">
-        <div class="task">Public relations</div>
+        <div class="role-item">Public relations</div>
       </div>
     </div>
 
@@ -493,9 +556,17 @@ footer {
         <h4>Oliver</h4>
         <span class="badge">Staffing Overseer</span>
         <div class="note">@BlazeBurnage</div>
+        <div class="description">As Staffing Overseer at Freshly Shopping, you work with executives to manage junior managers, track promotions and resignations, and update policies. You handle training files, schedules, and presentations, and work with Internal Affairs to approve or deny requests and review each case carefully.</div>
       </div>
       <div class="expand">
-        <div class="task">Hiring</div>
+        <div class="expand-section">
+          <h5>Managed Roles</h5>
+          <div class="role-item">Regional Manager</div>
+          <div class="role-item">Department Manager</div>
+          <div class="role-item">Floor Supervisor</div>
+          <div class="role-item">Senior Team Leader</div>
+          <div class="role-item">Team Leader</div>
+        </div>
       </div>
     </div>
 
@@ -507,7 +578,7 @@ footer {
         <div class="note">Temp Director</div>
       </div>
       <div class="expand">
-        <div class="task">Operations</div>
+        <div class="role-item">Operations</div>
       </div>
     </div>
 
@@ -519,13 +590,13 @@ footer {
         <div class="note">Temp Director</div>
       </div>
       <div class="expand">
-        <div class="task">System architecture</div>
+        <div class="role-item">System architecture</div>
       </div>
     </div>
 
   </div>
 
-  <div class="group">Corporate Officers</div>
+  <div class="group-header">Corporate Officers</div>
   <div class="team">
 
     <div class="member corp">
@@ -536,7 +607,7 @@ footer {
         <div class="note">Corporate</div>
       </div>
       <div class="expand">
-        <div class="task">Intern training</div>
+        <div class="role-item">Intern training</div>
       </div>
     </div>
 
@@ -548,7 +619,7 @@ footer {
         <div class="note">Future Role</div>
       </div>
       <div class="expand">
-        <div class="task">Unassigned</div>
+        <div class="role-item">Unassigned</div>
       </div>
     </div>
 
@@ -563,8 +634,13 @@ footer {
 <script>
 document.querySelectorAll(".member").forEach(m => {
   m.addEventListener("click", function(e) {
-    e.stopPropagation();
-    this.classList.toggle("open");
+    const wasOpen = this.classList.contains("open");
+    document.querySelectorAll(".member").forEach(member => {
+      member.classList.remove("open");
+    });
+    if (!wasOpen) {
+      this.classList.add("open");
+    }
   });
 });
 </script>
