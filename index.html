@@ -4,126 +4,395 @@
 <meta charset="utf-8">
 <title>Portbay Retail</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-font-family:Inter;
-color:white;
-background:url("0B0B0C50-C355-4523-B3FE-41E6915BB266.jpeg") center/cover no-repeat fixed;
-}
-.bgblur{
-position:fixed;inset:0;
-backdrop-filter:blur(28px) brightness(.6) saturate(1.3);
-z-index:-1
-}
-.container{max-width:1200px;margin:auto;padding:20px}
-
-header{
-display:flex;justify-content:space-between;align-items:center;
-padding:14px 20px;border-radius:18px;
-background:rgba(15,19,40,.55);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.12)
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.logo-wrap{
-display:flex;align-items:center;gap:12px;font-weight:900;font-size:18px
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: white;
+  background: url("https://media.discordapp.net/attachments/1444127107730112704/1444154744011624492/PBRROBLOX_USER_YT_BANNER.png") center/cover no-repeat fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-.logo-wrap img{
-width:42px;border-radius:10px
+.bgblur {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(40px) brightness(.4) saturate(1.2);
+  z-index: -1;
 }
 
-nav a{
-background:rgba(255,255,255,.08);
-padding:10px 16px;border-radius:14px;
-margin-left:8px;font-weight:600
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 24px;
 }
 
-.hero{
-margin-top:60px;
-background:rgba(14,17,41,.6);
-border-radius:28px;
-padding:44px;
-backdrop-filter:blur(22px);
-border:1px solid rgba(255,255,255,.14);
-box-shadow:0 0 60px rgba(255,255,255,.1)
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: slideDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.hero h1{font-size:42px;font-weight:900}
-.hero p{opacity:.75;margin-top:6px}
-
-.links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-.card{
-padding:16px;border-radius:18px;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.12)
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.socials{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px}
-
-.discord{
-display:flex;align-items:center;gap:12px;
-cursor:pointer
-}
-.discord img{width:32px}
-
-.section{margin-top:55px}
-
-.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-.group{margin-top:20px;font-weight:700;opacity:.65}
-
-.member{
-background:rgba(20,25,60,.75);
-border-radius:16px;padding:10px;
-backdrop-filter:blur(14px);
-border:1px solid rgba(255,255,255,.1);
-cursor:pointer;transition:.25s
-}
-.member:hover{transform:scale(1.05)}
-
-.avatar{
-width:100%;
-aspect-ratio:1;
-border-radius:10px;
-background:#222 center/cover no-repeat
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.5px;
 }
 
-.minfo{margin-top:6px}
-.minfo h4{font-size:13px}
-.badge{
-font-size:10px;
-padding:4px 9px;
-border-radius:30px;
-display:inline-block;
-margin:4px 0
+.logo-wrap img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.exec{background:linear-gradient(135deg,#70a0ff,#8bb4ff)}
-.board{background:linear-gradient(135deg,#a779ff,#dbb8ff)}
-.corp{background:linear-gradient(135deg,#00f0d4,#7bffe7)}
-
-.note{opacity:.6;font-size:11px}
-
-.expand{
-max-height:0;overflow:hidden;
-transition:.3s ease;font-size:11px
+nav {
+  display: flex;
+  gap: 10px;
 }
 
-.member.open .expand{max-height:120px;margin-top:4px}
-.task{
-background:rgba(255,255,255,.08);
-border-radius:8px;padding:4px;margin-top:4px
+nav a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-footer{text-align:center;margin:30px 0;opacity:.5}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-@media(max-width:680px){
-.links{grid-template-columns:1fr}
-.socials{grid-template-columns:1fr}
+.hero {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  padding: 60px 50px;
+  backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero > p {
+  opacity: 0.7;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.card {
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card b {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.card p {
+  opacity: 0.65;
+  font-size: 14px;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.discord {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.discord img {
+  width: 36px;
+  height: 36px;
+}
+
+.discord b {
+  font-size: 16px;
+}
+
+.discord p {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.roblox-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.roblox-link img {
+  width: 36px;
+  height: 36px;
+}
+
+.section {
+  margin-top: 60px;
+  animation: fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s backwards;
+}
+
+.section h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.group {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.member {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.member::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.member.exec::before {
+  background: linear-gradient(90deg, #70a0ff, #8bb4ff);
+  opacity: 1;
+}
+
+.member.board::before {
+  background: linear-gradient(90deg, #a779ff, #dbb8ff);
+  opacity: 1;
+}
+
+.member.corp::before {
+  background: linear-gradient(90deg, #00f0d4, #7bffe7);
+  opacity: 1;
+}
+
+.member:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05) center/cover no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.minfo {
+  margin-top: 14px;
+}
+
+.minfo h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 6px 0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.exec .badge {
+  background: linear-gradient(135deg, #70a0ff, #8bb4ff);
+  box-shadow: 0 4px 12px rgba(112, 160, 255, 0.3);
+}
+
+.board .badge {
+  background: linear-gradient(135deg, #a779ff, #dbb8ff);
+  box-shadow: 0 4px 12px rgba(167, 121, 255, 0.3);
+}
+
+.corp .badge {
+  background: linear-gradient(135deg, #00f0d4, #7bffe7);
+  box-shadow: 0 4px 12px rgba(0, 240, 212, 0.3);
+}
+
+.note {
+  opacity: 0.5;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: 12px;
+}
+
+.member.open .expand {
+  max-height: 200px;
+  margin-top: 12px;
+}
+
+.task {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-top: 6px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer {
+  text-align: center;
+  margin: 60px 0 30px 0;
+  opacity: 0.4;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media(max-width: 768px) {
+  .hero {
+    padding: 40px 30px;
+  }
+  
+  .hero h1 {
+    font-size: 40px;
+  }
+  
+  .links, .socials {
+    grid-template-columns: 1fr;
+  }
+  
+  .team {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 </style>
 </head>
@@ -134,159 +403,171 @@ footer{text-align:center;margin:30px 0;opacity:.5}
 <div class="container">
 
 <header>
-<div class="logo-wrap">
-<img src="DF85CBB7-FE6B-429E-A02B-A14F67EF5D21.png">
-<span>Portbay Retail</span>
-</div>
-<nav>
-<a href="#lead">Leadership</a>
-<a href="https://discord.gg/portbay" target="_blank">Discord</a>
-</nav>
+  <div class="logo-wrap">
+    <img src="https://media.discordapp.net/attachments/1442989345694023762/1444166721949798443/Portbaylogotransparent.png" alt="Portbay Logo">
+    <span>Portbay Retail</span>
+  </div>
+  <nav>
+    <a href="#lead">Leadership</a>
+    <a href="https://discord.gg/portbay" target="_blank">Discord</a>
+  </nav>
 </header>
 
 <section class="hero">
-<h1>Portbay Retail</h1>
-<p>Roblox Retail Reimagined</p>
+  <h1>Portbay Retail</h1>
+  <p>Roblox Retail Reimagined</p>
 
-<div class="links">
-<div class="card"><b>Community Rules</b><p>Expectations and conduct</p></div>
-<div class="card"><b>Systems</b><p>Store & gameplay operations</p></div>
-<div class="card"><b>Moderation</b><p>Fair and structured actions</p></div>
-</div>
+  <div class="links">
+    <div class="card">
+      <b>Community Rules</b>
+      <p>Expectations and conduct</p>
+    </div>
+    <div class="card">
+      <b>Systems</b>
+      <p>Store & gameplay operations</p>
+    </div>
+    <div class="card">
+      <b>Moderation</b>
+      <p>Fair and structured actions</p>
+    </div>
+  </div>
 
-<div class="socials">
-<div class="card discord" onclick="window.open('https://discord.gg/portbay')">
-<img src="https://cdn.simpleicons.org/discord/white">
-<div><b>Discord Server</b><p>discord.gg/portbay</p></div>
-</div>
-<div class="card">Roblox Group</div>
-</div>
+  <div class="socials">
+    <div class="card discord" onclick="window.open('https://discord.gg/portbay', '_blank')">
+      <img src="https://cdn.simpleicons.org/discord/white" alt="Discord">
+      <div>
+        <b>Discord Server</b>
+        <p>discord.gg/portbay</p>
+      </div>
+    </div>
+    <a href="https://www.roblox.com/communities/36029547/Portbay-Retail#!/about" target="_blank" class="card roblox-link">
+      <img src="https://cdn.simpleicons.org/roblox/white" alt="Roblox">
+      <div>
+        <b>Group Link</b>
+        <p>Join our community</p>
+      </div>
+    </a>
+  </div>
 
 </section>
 
 <section id="lead" class="section">
 
-<h2>Leadership</h2>
+  <h2>Leadership</h2>
 
-<div class="group">Executive Officer</div>
-<div class="team">
+  <div class="group">Executive Officer</div>
+  <div class="team">
 
-<div class="member exec" data-user="not_jacooob">
-<div class="avatar"></div>
-<div class="minfo">
-<h4>Jacob</h4>
-<span class="badge exec">Executive Officer</span>
-<div class="note">@not_jacooob · 2025 Founder</div>
-</div>
-<div class="expand">
-<div class="task">Executive leadership</div>
-<div class="task">Final decisions</div>
-</div>
-</div>
+    <div class="member exec">
+      <div class="avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-83B054748536D5F8C7FE602463AF287F-Png/352/352/Avatar/Webp/noFilter')"></div>
+      <div class="minfo">
+        <h4>Jacob</h4>
+        <span class="badge">Executive Officer</span>
+        <div class="note">@not_jacooob · 2025 Founder</div>
+      </div>
+      <div class="expand">
+        <div class="task">Executive leadership</div>
+        <div class="task">Final decisions</div>
+      </div>
+    </div>
 
-</div>
+  </div>
 
-<div class="group">Executive Board</div>
-<div class="team">
+  <div class="group">Executive Board</div>
+  <div class="team">
 
-<div class="member board" data-user="67stcrrygems">
-<div class="avatar"></div>
-<div class="minfo">
-<h4>hearts4dylan</h4>
-<span class="badge board">PR Director</span>
-<div class="note">@67stcrrygems</div>
-</div>
-<div class="expand">
-<div class="task">Public relations</div>
-</div>
-</div>
+    <div class="member board">
+      <div class="avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-819000BF2EF30C5DC45C593D7312B537-Png/720/720/Avatar/Webp/noFilter')"></div>
+      <div class="minfo">
+        <h4>hearts4dylan</h4>
+        <span class="badge">PR Director</span>
+        <div class="note">@67stcrrygems</div>
+      </div>
+      <div class="expand">
+        <div class="task">Public relations</div>
+      </div>
+    </div>
 
-<div class="member board" data-user="BlazeBurnage">
-<div class="avatar"></div>
-<div class="minfo">
-<h4>Oliver</h4>
-<span class="badge board">Staffing Overseer</span>
-<div class="note">@BlazeBurnage</div>
-</div>
-<div class="expand">
-<div class="task">Hiring</div>
-</div>
-</div>
+    <div class="member board">
+      <div class="avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-DC16B912AF210DD15B8AEE3074C0D92F-Png/720/720/Avatar/Webp/noFilter')"></div>
+      <div class="minfo">
+        <h4>Oliver</h4>
+        <span class="badge">Staffing Overseer</span>
+        <div class="note">@BlazeBurnage</div>
+      </div>
+      <div class="expand">
+        <div class="task">Hiring</div>
+      </div>
+    </div>
 
-<div class="member board">
-<div class="avatar"></div>
-<div class="minfo">
-<h4>Ashley.</h4>
-<span class="badge board">Operations Overseer</span>
-<div class="note">Temp Director</div>
-</div>
-<div class="expand">
-<div class="task">Operations</div>
-</div>
-</div>
+    <div class="member board">
+      <div class="avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-E621F06D01B538B19483DA07F7EE7A05-Png/720/720/Avatar/Webp/noFilter')"></div>
+      <div class="minfo">
+        <h4>Ashley.</h4>
+        <span class="badge">Operations Overseer</span>
+        <div class="note">Temp Director</div>
+      </div>
+      <div class="expand">
+        <div class="task">Operations</div>
+      </div>
+    </div>
 
-<div class="member board">
-<div class="avatar"></div>
-<div class="minfo">
-<h4>cenoooeoeooe</h4>
-<span class="badge board">Development Overseer</span>
-<div class="note">Temp Director</div>
-</div>
-<div class="expand">
-<div class="task">System architecture</div>
-</div>
-</div>
+    <div class="member board">
+      <div class="avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-63420191DEB64FF2EDDFE6882A097694-Png/352/352/Avatar/Webp/noFilter')"></div>
+      <div class="minfo">
+        <h4>cenoooeoeooe</h4>
+        <span class="badge">Development Overseer</span>
+        <div class="note">Temp Director</div>
+      </div>
+      <div class="expand">
+        <div class="task">System architecture</div>
+      </div>
+    </div>
 
-</div>
+  </div>
 
-<div class="group">Corporate Officers</div>
-<div class="team">
+  <div class="group">Corporate Officers</div>
+  <div class="team">
 
-<div class="member corp">
-<div class="avatar"></div>
-<div class="minfo">
-<h4>mia</h4>
-<span class="badge corp">Intern Director</span>
-<div class="note">Corporate</div>
-</div>
-<div class="expand">
-<div class="task">Intern training</div>
-</div>
-</div>
+    <div class="member corp">
+      <div class="avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-7207ADA89B2D25862A0C267F7B6B6799-Png/720/720/Avatar/Webp/noFilter')"></div>
+      <div class="minfo">
+        <h4>mia</h4>
+        <span class="badge">Intern Director</span>
+        <div class="note">Corporate</div>
+      </div>
+      <div class="expand">
+        <div class="task">Intern training</div>
+      </div>
+    </div>
 
-<div class="member corp">
-<div class="avatar"></div>
-<div class="minfo">
-<h4>Vacant</h4>
-<span class="badge corp">Reserved</span>
-<div class="note">Future Role</div>
-</div>
-<div class="expand">
-<div class="task">Unassigned</div>
-</div>
-</div>
+    <div class="member corp">
+      <div class="avatar"></div>
+      <div class="minfo">
+        <h4>Vacant</h4>
+        <span class="badge">Reserved</span>
+        <div class="note">Future Role</div>
+      </div>
+      <div class="expand">
+        <div class="task">Unassigned</div>
+      </div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
-<footer>© Portbay Retail</footer>
+<footer>© 2025 Portbay Retail</footer>
 
 </div>
 
 <script>
-function toggle(e){e.classList.toggle("open")}
-document.querySelectorAll(".member").forEach(m=>m.onclick=()=>toggle(m))
-
-document.querySelectorAll(".member").forEach(async m=>{
-let u=m.dataset.user
-if(!u)return
-let r=await fetch("https://users.roproxy.com/v1/usernames/users",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({usernames:[u]})})
-let j=await r.json()
-let id=j.data[0]?.id
-if(!id)return
-m.querySelector(".avatar").style.backgroundImage=`url(https://www.roblox.com/headshot-thumbnail/image?userId=${id}&width=420&height=420&format=png)`
-})
+document.querySelectorAll(".member").forEach(m => {
+  m.addEventListener("click", function(e) {
+    e.stopPropagation();
+    this.classList.toggle("open");
+  });
+});
 </script>
 
 </body>
