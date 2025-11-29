@@ -41,11 +41,6 @@ body {
   z-index: -1;
 }
 
-  :root {
-  --wumpus-1:#5865F2;
-  --wumpus-2:#4752C4;
-}
-
 /* Header */
 header {
   position: sticky;
@@ -379,14 +374,11 @@ header {
   border-radius: 20px 20px 0 0;
 }
 
+/* EXECUTIVE COLORS -> WUMPUS GRADIENT */
 .member-card.exec::before {
-  background: linear-gradient(90deg, var(--wumpus-1), var(--wumpus-2));
+  background: linear-gradient(90deg, #f5d7e4, #cfd9ff, #f7b3df);
 }
 
-.member-card.exec:hover {
-  box-shadow: 0 10px 30px rgba(88,101,242,.25);
-}
-  
 .member-card.board::before {
   background: linear-gradient(90deg, #ec4899, #f43f5e);
 }
@@ -428,10 +420,11 @@ header {
   margin-bottom: 8px;
 }
 
+/* EXEC BADGE -> WUMPUS PASTEL */
 .exec .member-badge {
-  background: linear-gradient(135deg, rgba(88,101,242,.22), rgba(71,82,196,.22));
-  color: #dbe0ff;
-  border: 1px solid rgba(88,101,242,.6);
+  background: linear-gradient(135deg, rgba(245, 215, 228, 0.28), rgba(207, 217, 255, 0.28));
+  color: #ffffff;
+  border: 1px solid rgba(245, 215, 228, 0.7);
 }
 
 .board .member-badge {
@@ -487,6 +480,10 @@ header {
 
 .member-card.open {
   z-index: 20;
+}
+
+.member-card.open .expand-toggle svg {
+  transform: rotate(180deg);
 }
 
 .member-expand {
@@ -656,6 +653,7 @@ footer {
   <section class="leadership-section">
     <h2 class="section-header">Leadership</h2>
 
+    <!-- EXECUTIVE OFFICER -->
     <div class="role-category">
       <div class="category-label">Executive Officer</div>
       <div class="member-grid">
@@ -687,6 +685,63 @@ footer {
       </div>
     </div>
 
+    <!-- NEW: OPERATIONS OVERSIGHT -->
+    <div class="role-category">
+      <div class="category-label">Operations Oversight</div>
+      <div class="member-grid">
+
+        <!-- Mia -->
+        <div class="member-card exec">
+          <div class="member-avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-7207ADA89B2D25862A0C267F7B6B6799-Png/720/720/Avatar/Webp/noFilter')"></div>
+          <div class="member-info">
+            <h4>Mia</h4>
+            <span class="member-badge">Intern Director</span>
+            <div class="member-handle">@sourchicken68</div>
+            <div class="member-description">As the Intern Director at Portbay Retail, you oversee the training, development, and placement of interns. You manage onboarding, monitor performance, and ensure all interns understand company policies and expectations. By maintaining organization and mentorship standards, you help develop future leaders within the company.</div>
+          </div>
+          <div class="expand-toggle">
+            <span>View Managed Roles</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+          </div>
+          <div class="member-expand">
+            <div class="expand-section">
+              <div class="expand-title">Manages</div>
+              <div class="role-tag">Deputy Intern Director</div>
+              <div class="role-tag">Management Intern</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- hearts4dylan -->
+        <div class="member-card exec">
+          <div class="member-avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-819000BF2EF30C5DC45C593D7312B537-Png/720/720/Avatar/Webp/noFilter')"></div>
+          <div class="member-info">
+            <h4>hearts4dylan</h4>
+            <span class="member-badge">Public Relations Director</span>
+            <div class="member-handle">@67stcrrygems</div>
+            <div class="member-description">As the Public Relations Director at Portbay Retail, you manage the company's public image and communication strategy. You oversee announcements, community interaction, and brand presentation across all platforms. You ensure messaging is professional, consistent, and aligned with corporate values while managing responses to public concerns and representing the company with confidence and integrity.</div>
+          </div>
+          <div class="expand-toggle">
+            <span>View Managed Roles</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+          </div>
+          <div class="member-expand">
+            <div class="expand-section">
+              <div class="expand-title">Manages</div>
+              <div class="role-tag">Deputy Public Relations Director</div>
+              <div class="role-tag">Public Relations Member</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- EXECUTIVE BOARD (minus hearts4dylan now) -->
+    <div class="role-category">
+      <div class="category-label">Executive Board</div>
+      <div class="member-grid">
+        
         <div class="member-card board">
           <div class="member-avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-DC16B912AF210DD15B8AEE3074C0D92F-Png/720/720/Avatar/Webp/noFilter')"></div>
           <div class="member-info">
@@ -755,61 +810,14 @@ footer {
           </div>
         </div>
 
-        <div class="role-category">
-  <div class="category-label">Operations Oversight</div>
-  <div class="member-grid">
-
-    <div class="member-card exec">
-      <div class="member-avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-7207ADA89B2D25862A0C267F7B6B6799-Png/720/720/Avatar/Webp/noFilter')"></div>
-      <div class="member-info">
-        <h4>Mia</h4>
-        <span class="member-badge">Intern Director</span>
-        <div class="member-handle">@sourchicken68</div>
-        <div class="member-description">
-          Oversees training pipelines, intern placement and performance reviews. Maintains onboarding standards and development programs that feed leadership roles.
-        </div>
-      </div>
-      <div class="expand-toggle">
-        <span>View Managed Roles</span>
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
-      </div>
-      <div class="member-expand">
-        <div class="expand-section">
-          <div class="expand-title">Manages</div>
-          <div class="role-tag">Deputy Intern Director</div>
-          <div class="role-tag">Management Intern</div>
-        </div>
       </div>
     </div>
 
-    <div class="member-card exec">
-      <div class="member-avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-Avatar-819000BF2EF30C5DC45C593D7312B537-Png/720/720/Avatar/Webp/noFilter')"></div>
-      <div class="member-info">
-        <h4>hearts4dylan</h4>
-        <span class="member-badge">Public Relations Director</span>
-        <div class="member-handle">@67stcrrygems</div>
-        <div class="member-description">
-          Owns brand voice, announcements and community reputation. Leads platform messaging and crisis response to keep public perception strong.
-        </div>
-      </div>
-      <div class="expand-toggle">
-        <span>View Managed Roles</span>
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
-      </div>
-      <div class="member-expand">
-        <div class="expand-section">
-          <div class="expand-title">Manages</div>
-          <div class="role-tag">Deputy PR Director</div>
-          <div class="role-tag">PR Member</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-      </div>
-    </div>
+    <!-- CORPORATE OFFICERS (Mia removed, Ray kept) -->
+    <div class="role-category">
+      <div class="category-label">Corporate Officers</div>
+      <div class="member-grid">
+        
         <div class="member-card corp">
           <div class="member-avatar" style="background-image: url('https://tr.rbxcdn.com/30DAY-AvatarHeadshot-8FBA83C22CA7E400C39B123480869226-Png/150/150/AvatarHeadshot/Webp/noFilter')"></div>
           <div class="member-info">
@@ -848,6 +856,7 @@ footer {
 <script>
 document.querySelectorAll(".member-card").forEach(card => {
   const toggle = card.querySelector(".expand-toggle");
+  if (!toggle) return;
   toggle.addEventListener("click", function(e) {
     e.stopPropagation();
     const wasOpen = card.classList.contains("open");
