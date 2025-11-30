@@ -806,13 +806,1543 @@ footer {
         </p>
       </section>
 
-      <!-- Admin Guide Section -->
-      <section id="admin-guide" class="content-section">
-        <h2 class="section-header">Admin Guide</h2>
-        <p style="color: #a1a1a1; line-height: 1.6;">
-          Complete guide coming soon...
-        </p>
-      </section>
+<section id="admin-guide" class="content-section">
+  <h2 class="section-header">CSystems Admin Panel - Complete Staff Guide</h2>
+  
+  <!-- Table of Contents -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 32px;">
+    <h3 style="font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">📋 Table of Contents</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; font-size: 14px; color: #a1a1a1; line-height: 2;">
+      <div>1. Introduction & Getting Started</div>
+      <div>2. Understanding Permission Levels</div>
+      <div>3. User Interface Overview</div>
+      <div>4. Home Page Features</div>
+      <div>5. Player Management</div>
+      <div>6. Player Monitoring System</div>
+      <div>7. Moderation Tools</div>
+      <div>8. Commands Reference</div>
+      <div>9. Settings & Customization</div>
+      <div>10. Control Panel</div>
+      <div>11. Best Practices & Guidelines</div>
+      <div>12. Troubleshooting & FAQs</div>
+    </div>
+  </div>
+
+  <!-- Section 1: Introduction -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">1. Introduction & Getting Started</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">What is CSystems?</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">CSystems is a comprehensive admin panel designed for Roblox games, providing powerful moderation, monitoring, and management tools. It features an intuitive interface, advanced player tracking, and intelligent monitoring systems.</p>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Opening the Admin Panel</h4>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Default Keybind: Press <strong style="color: #fff;">;</strong> (Semicolon)</li>
+      <li>Custom Keybind: Can be changed in Settings</li>
+      <li>First Time: You'll see a loading screen, then a login prompt (if password is enabled)</li>
+    </ul>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Your First Login</h4>
+    <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+      <li>Press ; to open the panel</li>
+      <li>Enter the password if prompted (ask your server owner)</li>
+      <li>You'll be greeted with the Home page</li>
+      <li>Your permission level will be displayed in the welcome card</li>
+    </ol>
+  </div>
+
+  <!-- Section 2: Permission Levels -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">2. Understanding Permission Levels</h3>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">CSystems uses a 6-tier permission system. Your access to features depends on your level.</p>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Permission Levels Breakdown</h4>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px;">
+      <thead>
+        <tr style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+          <th style="padding: 12px; text-align: left; color: #ffffff; font-weight: 600;">Level</th>
+          <th style="padding: 12px; text-align: left; color: #ffffff; font-weight: 600;">Role</th>
+          <th style="padding: 12px; text-align: left; color: #ffffff; font-weight: 600;">Icon</th>
+          <th style="padding: 12px; text-align: left; color: #ffffff; font-weight: 600;">Capabilities</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">0</td>
+          <td style="padding: 12px; color: #a1a1a1;">Player</td>
+          <td style="padding: 12px;">👤</td>
+          <td style="padding: 12px; color: #a1a1a1;">No admin access</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">1</td>
+          <td style="padding: 12px; color: #a1a1a1;">Moderator</td>
+          <td style="padding: 12px;">🛡️</td>
+          <td style="padding: 12px; color: #a1a1a1;">Basic moderation (warn, kick, view logs)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">2</td>
+          <td style="padding: 12px; color: #a1a1a1;">Admin</td>
+          <td style="padding: 12px;">⭐</td>
+          <td style="padding: 12px; color: #a1a1a1;">Full moderation + player management</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">3</td>
+          <td style="padding: 12px; color: #a1a1a1;">Super Admin</td>
+          <td style="padding: 12px;">💎</td>
+          <td style="padding: 12px; color: #a1a1a1;">Advanced features + ban/unban</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">4</td>
+          <td style="padding: 12px; color: #a1a1a1;">Developer</td>
+          <td style="padding: 12px;">🔧</td>
+          <td style="padding: 12px; color: #a1a1a1;">System configuration + permission management</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; color: #a1a1a1;">5</td>
+          <td style="padding: 12px; color: #a1a1a1;">Owner</td>
+          <td style="padding: 12px;">👑</td>
+          <td style="padding: 12px; color: #a1a1a1;">Complete system control</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">What Each Level Can Do</h4>
+    
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">🛡️ Moderator (Level 1)</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Warn players</li>
+        <li>Kick players</li>
+        <li>View player profiles</li>
+        <li>See recent activity</li>
+        <li>Use basic commands</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">⭐ Admin (Level 2)</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Everything Moderators can do</li>
+        <li>Add notes to player profiles</li>
+        <li>Clear warnings</li>
+        <li>Access player monitoring</li>
+        <li>Use teleport commands</li>
+        <li>Modify player stats (speed, jump, etc.)</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">💎 Super Admin (Level 3)</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Everything Admins can do</li>
+        <li>Ban/unban players</li>
+        <li>Advanced moderation actions</li>
+        <li>Full command access</li>
+        <li>Manage staff roles</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">🔧 Developer (Level 4)</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Everything Super Admins can do</li>
+        <li>Change user permissions</li>
+        <li>Manage VIP+ users</li>
+        <li>Access control panel</li>
+        <li>Configure system settings</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 0;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">👑 Owner (Level 5)</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Complete system control</li>
+        <li>All features unlocked</li>
+        <li>Animated theme effects</li>
+        <li>Final authority on all actions</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 3: UI Overview -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">3. User Interface Overview</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Main Panel Layout</h4>
+    <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; font-size: 12px; color: #a1a1a1; overflow-x: auto; margin-bottom: 16px;">
+┌─────────────────────────────────────────┐
+│  CSystems Admin Panel      [Theme] [X]  │ ← Header
+├─────────────────────────────────────────┤
+│ 🏠 ┃ 👥 ┃ 📋 ┃ ⚙️ ┃ 🔧 ┃               │ ← Navigation
+├─────────────────────────────────────────┤
+│                                         │
+│           PAGE CONTENT                  │ ← Active Page
+│                                         │
+└─────────────────────────────────────────┘</pre>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Navigation Bar Icons</h4>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>🏠 Home - Dashboard & recent activity</li>
+      <li>👥 Players - Online player management</li>
+      <li>📋 Commands - Command reference guide</li>
+      <li>⚙️ Settings - Panel customization</li>
+      <li>🔧 Control - Admin management (Level 4+)</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Understanding Cards</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 8px;">The interface uses "cards" - rounded sections containing related information:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+      <li>Header - Title and description</li>
+      <li>Content - Information or controls</li>
+      <li>Actions - Buttons for interactions</li>
+    </ul>
+  </div>
+
+  <!-- Section 4: Home Page -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">4. Home Page Features</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Update Log Card</h4>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>What it shows: Latest features, changes, and bug fixes</li>
+      <li>Dismissing: Click the X button in the top right</li>
+      <li>Note: Dismissed status saves - won't show again until next update</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Welcome Card</h4>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Time-based greeting: Good morning/afternoon/evening</li>
+      <li>Your info: Display name, permission level</li>
+      <li>System version: Current CSystems version</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Quick Stats</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 8px;">Shows real-time server statistics:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Players Online: Current player count</li>
+      <li>Commands Run: Total commands executed this session</li>
+      <li>Uptime: How long the server has been running</li>
+      <li>Your Rank: Your permission level name</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">VIP+ User Management (Level 4+ only)</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 12px;">Manage permission levels for VIP and higher users:</p>
+    
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Use:</p>
+    <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>View list of all VIP+ users</li>
+      <li>Click 🔧 Change Level on any user</li>
+      <li>Select new permission level</li>
+      <li>Confirm - changes apply immediately</li>
+    </ol>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Available Actions:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>❌ Remove - Remove all permissions (back to Player)</li>
+      <li>🛡️ Moderator - Grant Moderator access</li>
+      <li>⭐ Admin - Grant Admin access</li>
+      <li>💎 Super Admin - Grant Super Admin access</li>
+      <li>🔧 Developer - Grant Developer access</li>
+      <li>👑 Owner - Grant Owner access</li>
+    </ul>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Tips:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Changes are instant - no server restart needed</li>
+      <li>Click 🔄 Refresh to update the list</li>
+      <li>Only Owners (Level 5) can change permissions</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Recent Activity</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 12px;">Live feed of server events:</p>
+    
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Activity Types:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>🟢 Join - Player joined server</li>
+      <li>🔴 Leave - Player left server</li>
+      <li>⚡ Command - Admin command executed</li>
+    </ul>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Filtering:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>All - Show everything</li>
+      <li>Commands - Only admin commands</li>
+      <li>Joins - Only player joins</li>
+      <li>Actions - Only moderation actions</li>
+    </ul>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Search Bar:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+      <li>Type player name to filter activity</li>
+      <li>Results update in real-time</li>
+      <li>Case-insensitive search</li>
+    </ul>
+  </div>
+
+  <!-- Section 5: Player Management -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">5. Player Management</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Players Page Overview</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">Shows all online players with quick action buttons.</p>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Player Card Components</h4>
+    <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; font-size: 12px; color: #a1a1a1; overflow-x: auto; margin-bottom: 16px;">
+┌────────────────────────────────────────┐
+│ [Avatar] PlayerName                     │
+│          @username                      │
+│                         📋  🌀  🔨     │ ← Quick Actions
+│          👁️ Please Monitor             │ ← Monitoring Alert
+└────────────────────────────────────────┘</pre>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Quick Action Buttons</h4>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>📋 Profile - View detailed player profile</li>
+      <li>🌀 Teleport - Teleport to this player</li>
+      <li>🔨 Kick - Kick player from server</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Player Profile Features</h4>
+    
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Opening a Profile:</p>
+    <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Click 📋 button on any player card, OR</li>
+      <li>Use command :profile [player], OR</li>
+      <li>Click player name in activity feed</li>
+    </ol>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Profile Sections:</p>
+    
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">📊 Account Standing</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Visual indicator of player behavior</li>
+        <li>All Good 🟢 - 0-6 actions (green)</li>
+        <li>Limited 🟡 - 7-12 actions (yellow)</li>
+        <li>Very Limited 🟠 - 13-19 actions (orange)</li>
+        <li>At Risk 🔴 - 20-29 actions (red)</li>
+        <li>Suspended ⛔ - 30+ actions (dark red, auto-banned)</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">⚡ Quick Actions</p>
+      <p style="font-size: 14px; color: #a1a1a1; margin-bottom: 8px;">Available actions based on player status:</p>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px; margin-top: 12px;">For Online Players:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>🚪 Kick - Remove from server</li>
+        <li>⚠️ Warn - Issue warning</li>
+        <li>🚫 Ban - Permanently ban</li>
+        <li>📝 Note - Add staff note</li>
+        <li>🧹 Clear Warns - Remove all warnings (Level 4+)</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">For Banned Players:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>🔓 Unban - Remove ban</li>
+        <li>📋 View Ban - See ban details</li>
+        <li>🧹 Clear Warns - Clear warnings (Level 4+)</li>
+        <li>📝 Note - Add staff note</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">📋 Moderation Logs</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Complete history of all moderation actions</li>
+        <li>Shows: Action type, executor, reason, date/time</li>
+        <li>Automatically scrolls to latest</li>
+        <li>Preserved even when player is offline</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">📝 Staff Notes</p>
+      <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 8px;">Internal notes visible only to admins</p>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Use for:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Behavior observations</li>
+        <li>Context for warnings</li>
+        <li>Follow-up reminders</li>
+        <li>Team communication</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Add a Note:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Click 📝 Note in Quick Actions</li>
+        <li>Type your note (be clear and professional)</li>
+        <li>Click Add Note</li>
+        <li>Note appears with your name and timestamp</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Section 6: Monitoring System -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">6. Player Monitoring System</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">What is Player Monitoring?</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">An intelligent system that automatically flags players with concerning behavior patterns, providing AI-like recommendations for moderation actions.</p>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">When Players Get Flagged</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 8px;">A player is marked for monitoring when they have:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>5+ total violations (warnings + kicks + bans), OR</li>
+      <li>3+ warnings in the last 7 days</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Monitoring Indicators</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">Flagged players show a 👁️ Please Monitor button on their player card (orange/yellow color).</p>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Opening Monitoring View</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">Click 👁️ Please Monitor button to see detailed analysis.</p>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Monitoring View Modes</h4>
+    
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">📊 Detailed View (Default)</p>
+      <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 8px;">Shows comprehensive analysis:</p>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px; margin-top: 12px;">1. Violation Breakdown</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>⚠️ Total Warnings</li>
+        <li>🚪 Total Kicks</li>
+        <li>🚫 Total Bans</li>
+        <li>🕐 Recent (Last 7 Days)</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">2. Behavior Patterns</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>● Repeated Offenses - Multiple violations of same type</li>
+        <li>● Escalating Behavior - Progression from warnings to kicks/bans</li>
+        <li>● Recent Activity - Spike in recent violations</li>
+        <li>● High Frequency - Unusually high total count</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">3. Recommended Actions</p>
+      <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 8px;">Smart suggestions based on patterns:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>🚫 Temporary Ban (High Severity) - Multiple violations with escalation</li>
+        <li>⚠️ Final Warning (Medium) - Recent spike in warnings</li>
+        <li>🚪 Kick (Medium) - Warnings without enforcement</li>
+        <li>👁️ Monitor Closely (Low) - Pattern of minor violations</li>
+        <li>🔨 Permanent Ban (Critical) - 15+ total actions</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">📋 Brief View</p>
+      <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 8px;">Quick summary mode showing:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Total violation count breakdown</li>
+        <li>Primary recommendation highlighted</li>
+        <li>Quick action buttons (Warn, Kick, Ban)</li>
+      </ul>
+    </div>
+
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;"><strong style="color: #fff;">Switching Views:</strong> Click 📊 Detailed or 📋 Brief button in header.</p>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Understanding Recommendations</h4>
+    
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Severity Levels:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Critical 🔴 - Immediate action required</li>
+      <li>High 🟠 - Serious concern</li>
+      <li>Medium 🟡 - Moderate concern</li>
+      <li>Low 🟢 - Minor concern</li>
+      <li>Info ℹ️ - Informational</li>
+    </ul>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Each Recommendation Includes:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Action - What to do</li>
+      <li>Icon - Visual indicator</li>
+      <li>Severity - How urgent</li>
+      <li>Reason - Why this is recommended</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Best Practices for Monitoring</h4>
+    
+    <p style="font-size: 14px; font-weight: 600; color: #10b981; margin-bottom: 8px;">✅ DO:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Check monitoring alerts regularly</li>
+      <li>Review behavior patterns before taking action</li>
+      <li>Document your decisions in staff notes</li>
+      <li>Discuss concerning patterns with team</li>
+      <li>Use recommendations as guidelines, not absolute rules</li>
+    </ul>
+
+    <p style="font-size: 14px; font-weight: 600; color: #f43f5e; margin-bottom: 8px;">❌ DON'T:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+      <li>Ignore monitoring alerts</li>
+      <li>Take action based solely on numbers without context</li>
+      <li>Ban without understanding the full situation</li>
+      <li>Forget to document your reasoning</li>
+    </ul>
+  </div>
+
+  <!-- Section 7: Moderation Tools -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">7. Moderation Tools</h3>
+    
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Warning Players</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">When to Warn:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>First-time minor rule breaks</li>
+        <li>Borderline behavior</li>
+        <li>As a documented reminder</li>
+        <li>Before escalating to kick/ban</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Warn:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Open player profile</li>
+        <li>Click ⚠️ Warn</li>
+        <li>Enter clear, specific reason (e.g., "Spamming chat after request to stop")</li>
+        <li>Click Confirm</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Best Practices:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Be specific about what rule was broken</li>
+        <li>Explain expected behavior</li>
+        <li>Keep tone professional</li>
+        <li>Document context in notes</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Kicking Players</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">When to Kick:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>After multiple warnings</li>
+        <li>Moderate rule violations</li>
+        <li>Disruptive behavior</li>
+        <li>Need immediate removal without permanent ban</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Kick:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Open player profile or use command</li>
+        <li>Click 🚪 Kick or type :kick [player] [reason]</li>
+        <li>Enter reason</li>
+        <li>Confirm</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">What Happens:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Player immediately removed from server</li>
+        <li>Can rejoin immediately</li>
+        <li>Kick logged in moderation history</li>
+        <li>All online admins notified</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Banning Players</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">When to Ban:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Severe rule violations</li>
+        <li>Repeated offenses after warnings/kicks</li>
+        <li>Account standing reaches Suspended (30+ actions)</li>
+        <li>Threats, harassment, exploiting</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Types of Bans:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Manual Ban - Staff member initiates</li>
+        <li>Auto-Ban - System triggers at 30+ actions</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Ban:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Open player profile</li>
+        <li>Click 🚫 Ban</li>
+        <li>Enter detailed reason (this will be shown to player)</li>
+        <li>Click Confirm Ban</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Ban Dialog Shows:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Player information</li>
+        <li>Current account standing</li>
+        <li>Warning if player is already suspended</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">What Happens:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Player immediately kicked if online</li>
+        <li>Cannot rejoin server</li>
+        <li>Ban recorded with: reason, staff member, timestamp</li>
+        <li>Visible to all admins level 2+</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Unbanning Players</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Who Can Unban:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Super Admins (Level 3+)</li>
+        <li>Auto-unbans if warnings cleared and actions drop below 30</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Unban:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Search for player by UserID or check ban list</li>
+        <li>Open their profile (shows as banned)</li>
+        <li>Click 🔓 Unban</li>
+        <li>Confirm</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Auto-Unban Triggers:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Admin clears warnings</li>
+        <li>Total actions drop below 30</li>
+        <li>Player was banned by SYSTEM (auto-ban)</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Clearing Warnings</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Who Can Clear:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Super Admins and above (Level 4+)</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">When to Clear:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Player reformed behavior over time</li>
+        <li>False warnings identified</li>
+        <li>As part of appeal process</li>
+        <li>To prevent auto-ban</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Clear:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Open player profile</li>
+        <li>Click 🧹 Clear Warns</li>
+        <li>Confirm action</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">What Happens:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>All warnings removed from history</li>
+        <li>Account standing recalculated</li>
+        <li>If total actions drop below 30 and player was auto-banned, they're automatically unbanned</li>
+        <li>Action logged in moderation history</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Important:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Cannot be undone</li>
+        <li>Only removes warnings, not kicks/bans from logs</li>
+        <li>Consider carefully before using</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Adding Staff Notes</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Purpose:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Document context</li>
+        <li>Track ongoing situations</li>
+        <li>Communicate between staff</li>
+        <li>Record verbal warnings</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Add:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Click 📝 Note in player profile</li>
+        <li>Type note content</li>
+        <li>Click Add Note</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Note Format:</p>
+      <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; font-size: 12px; color: #a1a1a1; overflow-x: auto; margin-bottom: 12px;">Note: "Player warned verbally about language - monitor for improvement"
+By: YourUsername
+Date: 11/30/2025
+Time: 15:30:45</pre>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Best Practices:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Be clear and professional</li>
+        <li>Include relevant context</li>
+        <li>Date important conversations</li>
+        <li>Use for patterns, not single events</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 8: Commands Reference -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">8. Commands Reference</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">How to Use Commands</h4>
+    
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Command Format:</p>
+    <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; font-size: 12px; color: #a1a1a1; overflow-x: auto; margin-bottom: 12px;">:commandname [target] [optional parameters]</pre>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Examples:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>:kick John123 - Kick player John123</li>
+      <li>:speed me 50 - Set your speed to 50</li>
+      <li>:tp John Sarah - Teleport John to Sarah</li>
+    </ul>
+
+    <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Target Selectors:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>me - Yourself</li>
+      <li>all - All players</li>
+      <li>others - Everyone except you</li>
+      <li>[name] - Specific player (partial names work)</li>
+      <li>[userId] - Target by UserID (for offline players)</li>
+    </ul>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Command Categories</h4>
+
+    <div style="margin-bottom: 20px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 12px;">🛡️ Moderation Commands</p>
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px;">
+        <thead>
+          <tr style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Command</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Permission</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Description</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:warn [player] [reason]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Moderator</td>
+            <td style="padding: 10px; color: #a1a1a1;">Issue warning</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:warn John Spamming</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:kick [player] [reason]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Moderator</td>
+            <td style="padding: 10px; color: #a1a1a1;">Kick from server</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:kick John Disruptive</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:ban [player] [reason]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Super Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Permanently ban</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:ban John Exploiting</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:unban [userId]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Super Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Remove ban</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:unban 123456789</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:clearwarnings [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Super Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Clear all warnings</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:clearwarnings John</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:note [player] [text]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Add staff note</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:note John Good behavior</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 12px;">👤 Player Commands</p>
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px;">
+        <thead>
+          <tr style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Command</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Permission</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Description</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:kill [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Kill player</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:kill John</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:heal [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Fully heal</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:heal me</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:god [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Toggle god mode</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:god John</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:ungod [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Remove god mode</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:ungod John</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:speed [player] [value]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Set walk speed</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:speed John 50</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:jump [player] [value]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Set jump power</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:jump John 100</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:freeze [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Freeze in place</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:freeze John</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:unfreeze [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Unfreeze</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:unfreeze John</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 12px;">🌀 Teleport Commands</p>
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px;">
+        <thead>
+          <tr style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Command</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Permission</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Description</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:to [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Teleport to player</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:to John</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:bring [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Bring player to you</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:bring John</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:tp [p1] [p2]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Admin</td>
+            <td style="padding: 10px; color: #a1a1a1;">Teleport p1 to p2</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:tp John Sarah</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <p style="font-size: 15px; font-weight: 600; color: #ffffff; margin-bottom: 12px;">📊 Information Commands</p>
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px;">
+        <thead>
+          <tr style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Command</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Permission</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Description</th>
+            <th style="padding: 10px; text-align: left; color: #ffffff; font-weight: 600;">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:profile [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Moderator</td>
+            <td style="padding: 10px; color: #a1a1a1;">View player profile</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:profile John</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; color: #8b5cf6; font-family: monospace;">:logs [player]</td>
+            <td style="padding: 10px; color: #a1a1a1;">Moderator</td>
+            <td style="padding: 10px; color: #a1a1a1;">View moderation logs</td>
+            <td style="padding: 10px; color: #737373; font-family: monospace;">:logs John</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Command Tips</h4>
+    
+    <p style="font-size: 14px; font-weight: 600; color: #10b981; margin-bottom: 8px;">✅ DO:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>Use clear, professional reasons</li>
+      <li>Include context in moderation commands</li>
+      <li>Double-check player names before executing</li>
+      <li>Use :profile before major actions</li>
+    </ul>
+
+    <p style="font-size: 14px; font-weight: 600; color: #f43f5e; margin-bottom: 8px;">❌ DON'T:</p>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+      <li>Abuse commands for fun</li>
+      <li>Use vague reasons like "bad"</li>
+      <li>Spam commands</li>
+      <li>Use on yourself for advantage in gameplay</li>
+    </ul>
+  </div>
+
+  <!-- Section 9: Settings -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">9. Settings & Customization</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Accessing Settings</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">Click ⚙️ Settings in the navigation bar.</p>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">System Information</h4>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+      <li>System Name: CSystems Admin Panel</li>
+      <li>Version: Current version number</li>
+      <li>Creator: CSystems X Portbay Retail</li>
+      <li>Your Permission: Your current level</li>
+      <li>Current Theme: Active theme name</li>
+      <li>Keybind: Current open/close key</li>
+    </ul>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Keybind Customization</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Changing Your Keybind:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Go to Settings</li>
+        <li>Find "Open/Close Keybind" section</li>
+        <li>Click the keybind button</li>
+        <li>Press any key on your keyboard</li>
+        <li>New keybind saves automatically</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Recommended Keys:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>; (Semicolon) - Default</li>
+        <li>' (Quote)</li>
+        <li>/ (Slash)</li>
+        <li>- (Minus)</li>
+      </ul>
+
+      <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;"><strong style="color: #fff;">Note:</strong> Avoid gameplay keys (WASD, Space, Shift, etc.)</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Theme Customization</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Available Themes:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Midnight 🌙 - Deep blue with purple accents</li>
+        <li>Obsidian 🖤 - Pure black with purple highlights</li>
+        <li>Ocean 🌊 - Teal and cyan theme</li>
+        <li>Crimson ❤️ - Dark red theme</li>
+        <li>Forest 🌲 - Green nature theme</li>
+        <li>Sunset 🌅 - Orange and pink gradients</li>
+        <li>Galaxy 🌌 - Purple space theme</li>
+        <li>Monochrome ⚫ - Black and white</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Changing Themes:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Go to Settings (or click theme icon in header)</li>
+        <li>Scroll to theme section</li>
+        <li>Click any theme to preview</li>
+        <li>Changes apply instantly</li>
+        <li>Preference saves automatically</li>
+      </ol>
+
+      <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;"><strong style="color: #fff;">Owner Special:</strong> Level 5 gets animated gradient themes!</p>
+    </div>
+
+    <div>
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Accessibility Features</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Text Size Options:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>S - Small (0.8x)</li>
+        <li>N - Normal (1.0x) - Default</li>
+        <li>L - Large (1.2x)</li>
+        <li>XL - Extra Large (1.5x)</li>
+        <li>XXL - Huge (2.0x)</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Change:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+        <li>Go to Settings</li>
+        <li>Find "Accessibility" section</li>
+        <li>Click size button (S/N/L/XL/XXL)</li>
+        <li>Notification appears</li>
+        <li>Refresh panel (close and reopen) to apply</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Font Style Options:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Gotham - Clean, modern (default)</li>
+        <li>GothamBold - Bold version</li>
+        <li>SourceSans - Friendly, readable</li>
+        <li>SourceSansBold - Bold Source Sans</li>
+        <li>RobotoMono - Monospace, code-like</li>
+        <li>Code - Terminal style</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">How to Change Font:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 16px;">
+        <li>Go to Settings</li>
+        <li>Find "Font Style" section</li>
+        <li>Click font name to select</li>
+        <li>Preview shows in button</li>
+        <li>Refresh panel to apply</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Why Accessibility Matters:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Improves readability for all users</li>
+        <li>Helps users with visual impairments</li>
+        <li>Allows customization for comfort</li>
+        <li>Makes long sessions easier</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 10: Control Panel -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">10. Control Panel (Admin Management)</h3>
+    
+    <p style="font-size: 14px; color: #f43f5e; font-weight: 600; margin-bottom: 16px;">Access Required: Developer (Level 4+)</p>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">What is Control Panel?</h4>
+    <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 16px;">Advanced admin management interface for configuring permissions, managing staff roles, and viewing system data.</p>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Admin Management</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Viewing Admin List:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>See all users with permissions</li>
+        <li>Grouped by permission level</li>
+        <li>Shows username and UserID</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Managing Permissions:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Click user to expand options</li>
+        <li>Change permission level</li>
+        <li>Remove permissions entirely</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Adding New Admins:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Enter UserID or username</li>
+        <li>Select permission level</li>
+        <li>Click Add Admin</li>
+        <li>User immediately gains access</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Removing Admins:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Find user in list</li>
+        <li>Click Remove</li>
+        <li>Confirm action</li>
+        <li>User loses access immediately</li>
+      </ol>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Staff Role Management</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">What are Staff Roles?</p>
+      <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7; margin-bottom: 12px;">Visual roles that appear above players' heads in-game (separate from admin permissions).</p>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Creating Roles:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Go to Role Templates</li>
+        <li>Click Create New Role</li>
+        <li>Configure:
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li>Role name</li>
+            <li>Color (RGB)</li>
+            <li>Icon/emoji</li>
+            <li>Maximum users (optional)</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Assigning Roles:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Select player</li>
+        <li>Choose role from template</li>
+        <li>Click Assign</li>
+        <li>Billboard appears above player</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Role vs Permission:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Permission = What you can do (commands, features)</li>
+        <li>Role = Visual display only (cosmetic)</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Use Cases:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>VIP donors</li>
+        <li>Event staff</li>
+        <li>Trainers</li>
+        <li>Support team</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Data Management</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Viewing System Data:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Total bans</li>
+        <li>Total warnings issued</li>
+        <li>Command usage statistics</li>
+        <li>Join/leave history</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Backup Options:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Manual save trigger</li>
+        <li>Data export (if available)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 11: Best Practices -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">11. Best Practices & Guidelines</h3>
+    
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">General Moderation Principles</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">The Warning Ladder:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>1st Offense → Verbal warning (note it)</li>
+        <li>2nd Offense → Formal warning (:warn)</li>
+        <li>3rd Offense → Kick</li>
+        <li>4th+ Offense → Consider ban</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Context Matters:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Severity of rule break</li>
+        <li>Player's history</li>
+        <li>Intent vs accident</li>
+        <li>Age/maturity of player</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Documentation is Key</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Always Document:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Reasons for warns/kicks/bans</li>
+        <li>Context of situations</li>
+        <li>Player responses</li>
+        <li>Team discussions about edge cases</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Good Reason Examples:</p>
+      <ul style="font-size: 14px; color: #10b981; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>✅ "Spamming chat after 2 warnings to stop"</li>
+        <li>✅ "Using exploits to gain unfair advantage"</li>
+        <li>✅ "Harassment - making targeted insults after multiple requests to stop"</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Bad Reason Examples:</p>
+      <ul style="font-size: 14px; color: #f43f5e; line-height: 1.8; margin-left: 20px;">
+        <li>❌ "Being annoying"</li>
+        <li>❌ "Bad"</li>
+        <li>❌ "You know what you did"</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Team Communication</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Share Information:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Notify team of major bans</li>
+        <li>Ask for second opinions on edge cases</li>
+        <li>Report patterns you notice</li>
+        <li>Coordinate on ongoing situations</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Use Staff Notes:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Leave context for next shift</li>
+        <li>Track multi-day situations</li>
+        <li>Document verbal discussions</li>
+        <li>Note player promises/agreements</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Player Relations</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Stay Professional:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Remain calm and respectful</li>
+        <li>Don't argue or debate</li>
+        <li>Explain decisions briefly</li>
+        <li>Don't take insults personally</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Be Fair:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Apply rules consistently</li>
+        <li>Don't favor friends</li>
+        <li>Give everyone same treatment</li>
+        <li>Admit and correct mistakes</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Show Restraint:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Don't abuse admin powers</li>
+        <li>Use minimum necessary action</li>
+        <li>Give players chance to improve</li>
+        <li>Remember you represent the team</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Monitoring Best Practices</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Use the System:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Check monitoring alerts daily</li>
+        <li>Review flagged players</li>
+        <li>Follow recommendation severity</li>
+        <li>Track improvement over time</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Don't Over-Rely:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Numbers aren't everything</li>
+        <li>Consider context and intent</li>
+        <li>Some players reform</li>
+        <li>Fresh starts matter</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Pattern Recognition:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Notice escalation</li>
+        <li>Identify repeat offenders</li>
+        <li>Spot coordinated rule breaking</li>
+        <li>Track time-based patterns</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Security Practices</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Protect Access:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Don't share passwords</li>
+        <li>Don't give permissions lightly</li>
+        <li>Report suspicious admin behavior</li>
+        <li>Log out on shared devices</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Verify Before Action:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Confirm player identity</li>
+        <li>Double-check UserIDs</li>
+        <li>Verify evidence</li>
+        <li>Get proof when possible</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 12: Troubleshooting -->
+  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px; margin-bottom: 24px;">
+    <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">12. Troubleshooting & FAQs</h3>
+    
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Common Issues</h4>
+      
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">❓ "I can't open the admin panel"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Check your keybind in Settings</li>
+          <li>Verify you have admin permissions</li>
+          <li>Try different key if current is conflicting</li>
+          <li>Contact owner to confirm permissions</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">❓ "Commands aren't working"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Check you're using correct prefix (:)</li>
+          <li>Verify permission level for command</li>
+          <li>Ensure correct command spelling</li>
+          <li>Check target player name is correct</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">❓ "Player profile won't load"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Server might be lagging</li>
+          <li>Try refreshing (close and reopen profile)</li>
+          <li>Check internet connection</li>
+          <li>Report to developer if persists</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">❓ "Monitoring button doesn't appear"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Player might not meet threshold (5+ actions or 3+ recent warnings)</li>
+          <li>System might be calculating - wait a moment</li>
+          <li>Refresh player list</li>
+          <li>Check with admin if player should be flagged</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">❓ "Theme changed but I don't see it"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Close and reopen panel</li>
+          <li>Check Settings to confirm selection</li>
+          <li>Try different theme to test</li>
+          <li>Clear and reopen if needed</li>
+        </ul>
+      </div>
+
+      <div>
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">❓ "Text size/font won't change"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>These require panel refresh to apply</li>
+          <li>Close panel completely (don't just switch pages)</li>
+          <li>Reopen with keybind</li>
+          <li>Changes should now be visible</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Error Messages</h4>
+      
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">"Insufficient permissions"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Command requires higher level</li>
+          <li>Contact supervisor for permission upgrade</li>
+          <li>Check permission requirements in Commands page</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">"Player not found"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Player may have left server</li>
+          <li>Check spelling of username</li>
+          <li>Try using UserID instead</li>
+          <li>Use player selector (:profile, not :profile123)</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">"Failed to load data"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Server issue or DataStore problem</li>
+          <li>Try again in a moment</li>
+          <li>Report to developer if consistent</li>
+          <li>Check server logs</li>
+        </ul>
+      </div>
+
+      <div>
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">"Action failed"</p>
+        <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+          <li>Server-side error occurred</li>
+          <li>Check player is still online</li>
+          <li>Verify you have permissions</li>
+          <li>Report bug if repeats</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Performance Tips</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">If Panel is Laggy:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>Close other browser tabs/apps</li>
+        <li>Reduce player count in view</li>
+        <li>Switch to simpler theme</li>
+        <li>Check computer performance</li>
+      </ul>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">If Commands are Slow:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Server might be under load</li>
+        <li>Wait a few seconds between commands</li>
+        <li>Check server ping/latency</li>
+        <li>Report to owner if chronic</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Getting Help</h4>
+      
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Support Chain:</p>
+      <ol style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px; margin-bottom: 12px;">
+        <li>This guide - Check relevant section</li>
+        <li>Team members - Ask experienced admins</li>
+        <li>Developers - Report bugs/issues</li>
+        <li>Owner - Final authority</li>
+      </ol>
+
+      <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 8px;">When Reporting Issues:</p>
+      <ul style="font-size: 14px; color: #a1a1a1; line-height: 1.8; margin-left: 20px;">
+        <li>Describe what you were doing</li>
+        <li>Note any error messages</li>
+        <li>Mention your permission level</li>
+        <li>Include screenshots if possible</li>
+        <li>Say if it's repeatable</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Frequently Asked Questions</h4>
+      
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: Can I use admin commands for fun?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: No. Admin powers are for moderation and management only. Abuse will result in permission removal.</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: How long do bans last?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: Bans are permanent unless a Super Admin+ unbans the player or system auto-unbans (if warnings cleared and actions drop below 30).</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: Can I give my friend admin?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: Only Owners and Developers can grant permissions. Never share your access.</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: What if I accidentally ban someone?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: Immediately unban them (if you have permission), add a note explaining, and notify your supervisor.</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: How often should I check monitoring alerts?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: Check at start of shift and periodically throughout. Daily review recommended.</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: Can players see staff notes?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: No. Staff notes are internal only, visible to admin level 2+.</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: What if two admins disagree on a ban?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: Escalate to higher permission level (Super Admin, Developer, or Owner) for final decision.</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: Can banned players appeal?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: This depends on server policy. Check with owner. Appeals typically reviewed by Super Admin+.</p>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: How do I report another admin?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: Document the issue with screenshots/details and report to Developers or Owner privately.</p>
+      </div>
+
+      <div>
+        <p style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 6px;">Q: Can I customize the panel colors?</p>
+        <p style="font-size: 14px; color: #a1a1a1; line-height: 1.7;">A: Use the available themes. Custom color creation requires Developer access.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Reference Card -->
+  <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 20px; padding: 28px;">
+    <h3 style="font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">📌 Quick Reference Card</h3>
+    
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Essential Shortcuts</h4>
+    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
+      <thead>
+        <tr style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+          <th style="padding: 12px; text-align: left; color: #ffffff; font-weight: 600;">Action</th>
+          <th style="padding: 12px; text-align: left; color: #ffffff; font-weight: 600;">Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">Open Panel</td>
+          <td style="padding: 12px; color: #a1a1a1; font-family: monospace;">; (or your keybind)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">View Player</td>
+          <td style="padding: 12px; color: #a1a1a1;">Click 📋 on player card</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">Quick Warn</td>
+          <td style="padding: 12px; color: #a1a1a1;">Click ⚠️ in player profile</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">Quick Kick</td>
+          <td style="padding: 12px; color: #a1a1a1;">Click 🚪 in player profile</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">Quick Ban</td>
+          <td style="padding: 12px; color: #a1a1a1;">Click 🚫 in player profile</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 12px; color: #a1a1a1;">View Monitoring</td>
+          <td style="padding: 12px; color: #a1a1a1;">Click 👁️ on flagged players</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; color: #a1a1a1;">Change Theme</td>
+          <td style="padding: 12px; color: #a1a1a1;">Click theme icon in header</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-size: 16px; font-weight: 600; color: #8b5cf6; margin-bottom: 12px;">Remember:</h4>
+    <ul style="font-size: 14px; color: #a1a1a1; line-height: 2; margin-left: 20px;">
+      <li>✅ Always document your actions</li>
+      <li>✅ When in doubt, ask a higher-up</li>
+      <li>✅ Treat all players fairly and professionally</li>
+      <li>✅ Use monitoring system to guide decisions</li>
+      <li>✅ Report bugs and issues promptly</li>
+    </ul>
+
+    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+      <p style="font-size: 13px; color: #737373; margin-bottom: 4px;">END OF STAFF GUIDE</p>
+      <p style="font-size: 12px; color: #525252;">Version 2.2.0 - Last Updated: November 2025</p>
+      <p style="font-size: 12px; color: #525252;">For support, contact your server administrator</p>
+    </div>
+  </div>
+
+</section>
 
       <!-- Commands Section -->
       <section id="commands" class="content-section">
